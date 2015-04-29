@@ -1,0 +1,17 @@
+cd /home/sn/dev/Qvtr/vetracto/setup
+
+cp ../src/Qvtr packages/qvtr/data
+cp ../../db/vtrdb.db packages/db/data
+
+cp /opt/Qt/5.4/gcc_64/lib/libQt5Core.so.5.4.1 packages/libs/data
+cp /opt/Qt/5.4/gcc_64/lib/libQt5Gui.so.5.4.1 packages/libs/data
+cp /opt/Qt/5.4/gcc_64/lib/libQt5Sql.so.5.4.1 packages/libs/data
+
+cp /opt/Qt/5.4/gcc_64/plugins/imageformats/libqjpeg.so packages/libs/data/imageformats
+cp /opt/Qt/5.4/gcc_64/plugins/imageformats/libqtiff.so packages/libs/data/imageformats
+
+cp /opt/Qt/5.4/gcc_64/plugins/sqldrivers/libqsqlite.so packages/libs/data/sqldrivers
+
+../../../../Qt/QtIFW2.0.0/bin/binarycreator -c config/config.xml -p packages Qvtr-setup
+
+

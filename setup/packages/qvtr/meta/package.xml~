@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>Qvtr</DisplayName>
+    <Description>A vetracto program.</Description>
+    <Version>1.1.0</Version>
+    <ReleaseDate>2015-04-23</ReleaseDate>
+    <Licenses>
+        <License name="GNU GPL3" file="license.txt" />
+    </Licenses>
+    <Default>true</Default>
+    <Translations>
+        <Translation>de.ts</Translation>
+        <Translation>pl.ts</Translation>
+    </Translations>    
+</Package>

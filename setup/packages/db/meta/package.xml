@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>vtrdb.db</DisplayName>
+    <Description>A vetracto adatbázisa.</Description>
+    <Version>1.1.0</Version>
+    <ReleaseDate>2015-04-23</ReleaseDate>
+    <Licenses>
+        <License name="GNU GPL3" file="license.txt" />
+    </Licenses>
+    <Default>true</Default>
+</Package>

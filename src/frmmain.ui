@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmMainClass</class>
+ <widget class="QMainWindow" name="frmMainClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>883</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>883</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>VeTracto</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/1267613805_add-address.png</normaloff>:/images/1267613805_add-address.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Törzsszám:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>51</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>51</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Tulajdonos:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Állat:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="minimumSize">
+         <size>
+          <width>141</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAlphabetically</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Állatorvos:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_3">
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="font">
+         <font>
+          <family>Lucida Sans Unicode</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>38</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" rowspan="3">
+     <widget class="QTreeWidget" name="treeWidget">
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>426</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Sans Unicode</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="locale">
+       <locale language="Hungarian" country="Hungary"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>341</width>
+        <height>111</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>341</width>
+        <height>111</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Sans Unicode</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>Tulajdonos</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Név:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>20</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Helység:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_3">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>41</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Lucida Sans Unicode</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_4">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>201</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>201</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Lucida Sans Unicode</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Cím:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="lineEdit_5">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>141</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>141</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Lucida Sans Unicode</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_14">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>101</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>41</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Lucida Sans Unicode</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="2" rowspan="3">
+     <widget class="QTreeWidget" name="treeWidget_2">
+      <property name="minimumSize">
+       <size>
+        <width>256</width>
+        <height>426</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Sans Unicode</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="locale">
+       <locale language="Hungarian" country="Hungary"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>341</width>
+        <height>255</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>341</width>
+        <height>255</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Sans Unicode</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="title">
+       <string>Állat</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Hívónév:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Faj:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_7">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Fajta:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_8">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Szín:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_9">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ivar:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_10">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Születés dátuma:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="lineEdit_11">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mikrochip ID:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="lineEdit_12">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Könyv száma:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="lineEdit_13">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>201</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Lucida Sans Unicode</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <spacer name="verticalSpacer">
+      <property name="font">
+       <font>
+        <family>Lucida Sans Unicode</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>88</width>
+        <height>55</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>883</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuF_jl">
+    <property name="title">
+     <string>Fájl</string>
+    </property>
+    <widget class="QMenu" name="menuAdatok">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Adatok</string>
+     </property>
+     <widget class="QMenu" name="menuKarbantart_s">
+      <property name="title">
+       <string>Karbantartás</string>
+      </property>
+      <addaction name="action_llatorvosok"/>
+      <addaction name="separator"/>
+      <addaction name="actionFaj"/>
+      <addaction name="actionFajta"/>
+      <addaction name="actionF_reghajt"/>
+      <addaction name="actionHelys_g"/>
+      <addaction name="actionIvar"/>
+      <addaction name="actionSz_n"/>
+      <addaction name="actionTelep_l_s"/>
+      <addaction name="actionVakcina"/>
+      <addaction name="separator"/>
+      <addaction name="actionAdatb_zis"/>
+     </widget>
+     <addaction name="menuKarbantart_s"/>
+     <addaction name="actionArchiv_l_s"/>
+     <addaction name="actionImport_MySQL"/>
+    </widget>
+    <addaction name="actionBe_ll_t_sok"/>
+    <addaction name="menuAdatok"/>
+    <addaction name="separator"/>
+    <addaction name="actionKil_p"/>
+   </widget>
+   <widget class="QMenu" name="menuT_rzsadatok">
+    <property name="title">
+     <string>Törzsadatok</string>
+    </property>
+    <addaction name="actionJ_tulajdonos_s_llat_r_gz_t_se"/>
+    <addaction name="action_j_llat_r_gz_t_se_a_tulajdonoshoz"/>
+    <addaction name="actionAdatok_m_dos_t_sa"/>
+   </widget>
+   <widget class="QMenu" name="menuTev_kenys_g">
+    <property name="title">
+     <string>Tevékenység</string>
+    </property>
+    <addaction name="actionVakcin_z_s"/>
+    <addaction name="actionKezel_s"/>
+    <addaction name="actionSeb_szet"/>
+    <addaction name="actionLabor"/>
+    <addaction name="actionR_ntgen"/>
+   </widget>
+   <widget class="QMenu" name="menuLek_rdez_s">
+    <property name="title">
+     <string>Lekérdezés</string>
+    </property>
+    <addaction name="actionJelent_sek"/>
+    <addaction name="actionLista"/>
+   </widget>
+   <widget class="QMenu" name="menuS_g">
+    <property name="title">
+     <string>Súgó</string>
+    </property>
+    <addaction name="actionN_vjegy"/>
+   </widget>
+   <addaction name="menuF_jl"/>
+   <addaction name="menuT_rzsadatok"/>
+   <addaction name="menuTev_kenys_g"/>
+   <addaction name="menuLek_rdez_s"/>
+   <addaction name="menuS_g"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionBe_ll_t_sok">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398812_configure.png</normaloff>:/images/1265398812_configure.png</iconset>
+   </property>
+   <property name="text">
+    <string>Beállítások</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="priority">
+    <enum>QAction::HighPriority</enum>
+   </property>
+  </action>
+  <action name="actionKil_p">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398965_exit.png</normaloff>:/images/1265398965_exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Kilép</string>
+   </property>
+  </action>
+  <action name="actionArchiv_l_s">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Archiválás</string>
+   </property>
+   <property name="toolTip">
+    <string>Archiválás</string>
+   </property>
+  </action>
+  <action name="action_llatorvosok">
+   <property name="text">
+    <string>Állatorvosok</string>
+   </property>
+  </action>
+  <action name="actionFaj">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Faj</string>
+   </property>
+  </action>
+  <action name="actionFajta">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Fajta</string>
+   </property>
+  </action>
+  <action name="actionF_reghajt">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Féreghajtó</string>
+   </property>
+  </action>
+  <action name="actionHelys_g">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Helység</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionIvar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ivar</string>
+   </property>
+  </action>
+  <action name="actionSz_n">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Szín</string>
+   </property>
+  </action>
+  <action name="actionVakcina">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vakcina</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionJ_tulajdonos_s_llat_r_gz_t_se">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398284_folder_blue_open.png</normaloff>:/images/1265398284_folder_blue_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Új tulajdonos és állat rögzítése</string>
+   </property>
+  </action>
+  <action name="action_j_llat_r_gz_t_se_a_tulajdonoshoz">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398462_gf.png</normaloff>:/images/1265398462_gf.png</iconset>
+   </property>
+   <property name="text">
+    <string>Új állat rögzítése a tulajdonoshoz</string>
+   </property>
+  </action>
+  <action name="actionAdatok_m_dos_t_sa">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398448_folder_orange_open.png</normaloff>:/images/1265398448_folder_orange_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adatok módosítása</string>
+   </property>
+  </action>
+  <action name="actionVakcin_z_s">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1263673602_Antivirus-64.png</normaloff>:/images/1263673602_Antivirus-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vakcinázás</string>
+   </property>
+  </action>
+  <action name="actionKezel_s">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398973_txt.png</normaloff>:/images/1265398973_txt.png</iconset>
+   </property>
+   <property name="text">
+    <string>Kezelés</string>
+   </property>
+  </action>
+  <action name="actionSeb_szet">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398805_editcut.png</normaloff>:/images/1265398805_editcut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sebészet</string>
+   </property>
+  </action>
+  <action name="actionR_ntgen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Röntgen</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionLabor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/1267613536_Measurement.png</normaloff>:/images/1267613536_Measurement.png</iconset>
+   </property>
+   <property name="text">
+    <string>Labor</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionN_vjegy">
+   <property name="text">
+    <string>Névjegy</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="actionJelent_sek">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Jelentések</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionLista">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/1265398629_print_printer.png</normaloff>:/images/1265398629_print_printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lista</string>
+   </property>
+  </action>
+  <action name="actionNorberger">
+   <property name="text">
+    <string>Norberger</string>
+   </property>
+  </action>
+  <action name="actionImport_MySQL">
+   <property name="text">
+    <string>Trafo MySQL</string>
+   </property>
+  </action>
+  <action name="actionAdatb_zis">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Adatbázis tisztítás</string>
+   </property>
+  </action>
+  <action name="actionTelep_l_s">
+   <property name="text">
+    <string>Település</string>
+   </property>
+  </action>
+  <action name="actionTPA">
+   <property name="text">
+    <string>TPA</string>
+   </property>
+  </action>
+  <action name="actionK_z_s_tangens">
+   <property name="text">
+    <string>Közös tangens</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

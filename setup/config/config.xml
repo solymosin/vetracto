@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>Qvtr</Name>
+    <Version>1.1.0</Version>
+    <Title>Qvtr</Title>
+    <Publisher>Solymosi Norbert</Publisher>
+    <StartMenuDir>Accessories</StartMenuDir>
+    <TargetDir>@HomeDir@/Qvtr</TargetDir>
+</Installer>
