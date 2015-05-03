@@ -78,7 +78,7 @@
 frmMain::frmMain(QWidget *parent): QMainWindow(parent), ui(new Ui::frmMainClass){
     ui->setupUi(this);
 
-    QApplication::setApplicationVersion("1.0984");
+    QApplication::setApplicationVersion("1.0985");
 
     /*kozepre teszi a nyito kepernyot*/
     QRect available_geom = QDesktopWidget().availableGeometry();

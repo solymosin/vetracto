@@ -6,12 +6,44 @@ cp ../../db/vtrdb.db packages/db/data
 cp /opt/Qt/5.4/gcc_64/lib/libQt5Core.so.5.4.1 packages/libs/data
 cp /opt/Qt/5.4/gcc_64/lib/libQt5Gui.so.5.4.1 packages/libs/data
 cp /opt/Qt/5.4/gcc_64/lib/libQt5Sql.so.5.4.1 packages/libs/data
+cp /opt/Qt/5.4/gcc_64/lib/libQt5PrintSupport.so.5.4.1 packages/libs/data
+cp /opt/Qt/5.4/gcc_64/lib/libQt5Widgets.so.5.4.1 packages/libs/data
 
 cp /opt/Qt/5.4/gcc_64/plugins/imageformats/libqjpeg.so packages/libs/data/imageformats
 cp /opt/Qt/5.4/gcc_64/plugins/imageformats/libqtiff.so packages/libs/data/imageformats
 
 cp /opt/Qt/5.4/gcc_64/plugins/sqldrivers/libqsqlite.so packages/libs/data/sqldrivers
 
-../../../../Qt/QtIFW2.0.0/bin/binarycreator -c config/config.xml -p packages Qvtr-setup
+../../../../Qt/QtIFW2.0.0/bin/binarycreator -c config/config.xml -p packages Qvtr-setup_64
 
+
+cd C:\dev\vetracto
+mkdir setup\packages\qvtr\data
+mkdir setup\packages\db\data
+mkdir setup\packages\libs\data
+mkdir setup\packages\libs\data\imageformats
+mkdir setup\packages\libs\data\sqldrivers
+
+copy src\release\Qvtr.exe setup\packages\qvtr\data
+copy arch\db\vtrdb.db setup\packages\db\data
+
+copy "C:\Qt\5.4\mingw491_32\bin\Qt5Core.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\Qt5Gui.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\Qt5Sql.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\Qt5PrintSupport.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\Qt5Widgets.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\libgcc_s_dw2-1.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\libstdc++-6.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\libwinpthread-1.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\icuin53.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\icuuc53.dll" setup\packages\libs\data
+copy "C:\Qt\5.4\mingw491_32\bin\icudt53.dll" setup\packages\libs\data
+
+copy C:\Qt\5.4\mingw491_32\plugins\imageformats\qjpeg.dll setup\packages\libs\data\imageformats
+copy C:\Qt\5.4\mingw491_32\plugins\imageformats\qtiff.dll setup\packages\libs\data\imageformats
+
+copy C:\Qt\5.4\mingw491_32\plugins\sqldrivers\qsqlite.dll setup\packages\libs\data\sqldrivers
+
+cd setup
+C:\Qt\QtIFW2.0.0\bin\binarycreator.exe -c config/config.xml -p packages Qvtr-setup_win32.exe
 
