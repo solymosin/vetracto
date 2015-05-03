@@ -17,9 +17,16 @@
 #include "textedit.h"
 #include "vtrcodes.h"
 
-frmKezel::frmKezel(QWidget *parent) : QDialog(parent), m_ui(new Ui::frmKezel)
-{
+frmKezel::frmKezel(QWidget *parent) : QDialog(parent), m_ui(new Ui::frmKezel){
     m_ui->setupUi(this);
+
+    m_ui->textEdit->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_ui->textEdit_2->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_ui->textEdit_3->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_ui->textEdit_4->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_ui->textEdit_5->setContextMenuPolicy(Qt::CustomContextMenu);
+
+
     connect(m_ui->toolButton, SIGNAL(clicked()), this, SLOT(reject()));
     connect(m_ui->toolButton_5, SIGNAL(clicked()), this, SLOT(EditorNyit()));
 
@@ -30,6 +37,7 @@ frmKezel::frmKezel(QWidget *parent) : QDialog(parent), m_ui(new Ui::frmKezel)
     connect(m_ui->radioButton_5, SIGNAL(clicked()), this, SLOT(ListaBetolto()));
 
     connect(m_ui->listView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(ListatoPlain()));
+
     connect(m_ui->textEdit, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(TextboLista()));
     connect(m_ui->textEdit_2, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(TextboLista()));
     connect(m_ui->textEdit_3, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(TextboLista()));
@@ -300,14 +308,23 @@ void frmKezel::ListatoPlain(){
 }
 
 void frmKezel::TextboLista(){
-    QMenu* contextMenu = new QMenu(this);
+    QMenu* menu = m_ui->textEdit->createStandardContextMenu();
     QString lab = QString("Hozzáad a listához");
-    QAction *a = contextMenu->addAction(lab);
+    QAction *a = menu->addAction(lab);
     connect(a, SIGNAL(triggered()), this, SLOT(UjListaElem()));
-    contextMenu->popup(QCursor::pos());
-    contextMenu->exec();
-    delete contextMenu;
-    contextMenu = 0;
+    menu->popup(QCursor::pos());
+    menu->exec();
+    delete menu;
+    menu = 0;
+
+//    QMenu* contextMenu = new QMenu(this);
+//    QString lab = QString("Hozzáad a listához");
+//    QAction *a = contextMenu->addAction(lab);
+//    connect(a, SIGNAL(triggered()), this, SLOT(UjListaElem()));
+//    contextMenu->popup(QCursor::pos());
+//    contextMenu->exec();
+//    delete contextMenu;
+//    contextMenu = 0;
 }
 
 void frmKezel::UjListaElem(){
@@ -317,27 +334,29 @@ void frmKezel::UjListaElem(){
 
     QString kulcs = this->focusWidget()->objectName();
 
-    if (kulcs == "plainTextEdit"){
+    //qDebug() << kulcs;
+
+    if (kulcs == "textEdit"){
         m_ui->radioButton->setChecked(true);
         m_ui->textEdit->copy();
         sql = "insert into lanamnesis (anamnesis) values(?)";
 
-    } else if (kulcs == "plainTextEdit_2"){
+    } else if (kulcs == "textEdit_2"){
         m_ui->radioButton_2->setChecked(true);
         m_ui->textEdit_2->copy();
         sql = "insert into ltunetekaltalanos (tunetek) values(?)";
 
-    } else if (kulcs == "plainTextEdit_3"){
+    } else if (kulcs == "textEdit_3"){
         m_ui->radioButton_3->setChecked(true);
         m_ui->textEdit_3->copy();
         sql = "insert into ldiagnosisaltalanos (diagnosis) values(?)";
 
-    } else if (kulcs == "plainTextEdit_4"){
+    } else if (kulcs == "textEdit_4"){
         m_ui->radioButton_4->setChecked(true);
         m_ui->textEdit_4->copy();
         sql = "insert into lbeavatkozasaltalanos (beavatkozas) values(?)";
 
-    } else if (kulcs == "plainTextEdit_5"){
+    } else if (kulcs == "textEdit_5"){
         m_ui->radioButton_5->setChecked(true);
         m_ui->textEdit_5->copy();
         sql = "insert into agyogyofo (gyogyszer) values(?)";
